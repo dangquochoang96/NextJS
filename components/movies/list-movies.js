@@ -5,6 +5,7 @@ import * as reselect from '../../redux/movies/reselect'
 import { createStructuredSelector } from 'reselect'
 import { useSelector } from 'react-redux'
 
+
 const { Meta } = Card
 
 export default function ListMovies() {
@@ -24,7 +25,7 @@ export default function ListMovies() {
           <Row>
           {movies ? movies.map((item, index) => (
             <Col span={6} key={index}>
-              <Link href={`Film/${slugify(item.title)}/${item.id}`}>
+              <Link href={`/${slugify(item.title)}/${item.id}`}>
                 <a>
                   <Card
                     hoverable
