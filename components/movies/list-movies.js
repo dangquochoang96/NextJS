@@ -25,7 +25,7 @@ export default function ListMovies() {
           <Row>
           {movies ? movies.map((item, index) => (
             <Col span={6} key={index}>
-              <Link href={`/${slugify(item.title)}/${item.id}`}>
+              <Link href={`film/${slugify(item.title)}/${item.id}`}>
                 <a>
                   <Card
                     hoverable

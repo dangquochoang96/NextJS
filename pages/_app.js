@@ -12,11 +12,13 @@ function MyApp({ Component, pageProps }) {
   const store = configStore(pageProps.initialReduxState)
   const persistor = persistStore(store)
   return (
+    <>
     <Provider store={store}>
       <PersistGate loading={<Skeleton/>} persistor={persistor}>
         <Component {...pageProps} />
       </PersistGate>
     </Provider>
+    </>
   )
 }
 
