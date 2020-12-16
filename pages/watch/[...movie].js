@@ -34,7 +34,7 @@ export async function getServerSideProps({ query }) {
     const result = await api.getDataMoviesById(id)
     return {
         props: {
-            movie: [],
+            movie: result,
         },
     }
 }

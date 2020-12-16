@@ -10,19 +10,19 @@ export default function DetailMovie({ movie }) {
       <Row>
         <Col style={{ padding: '10px' }} span={6}>
           <Image src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
-          <p style={{textAlign: 'center'}}>{movie.original_title}</p>
+          <p style={{ textAlign: 'center' }}>{movie.original_title}</p>
         </Col>
-        <Col span={12} style={{padding: '10px'}}>
+        <Col span={12} style={{ padding: '10px' }}>
           <h1>{movie.title}</h1>
           <p>{movie.overview}</p>
         </Col>
-        <Col span={6} style={{padding: '10px'}}>
+        <Col span={6} style={{ padding: '10px' }}>
           <Row>
-          {movie.images.backdrops.map((item, index) => (
-            <Col span={24} key={index}>
-              <Image src={`https://image.tmdb.org/t/p/w300${item.file_path}`} alt={item.vote_count}/>
-            </Col>
-          ))}
+            {movie.images.backdrops.map((item, index) => (
+              <Col span={24} key={index}>
+                <Image src={`https://image.tmdb.org/t/p/w300${item.file_path}`} alt={item.vote_count} />
+              </Col>
+            ))}
           </Row>
         </Col>
       </Row>
